@@ -17,6 +17,12 @@
 		  FROM member
 	</select>
 	
+	<select id="selectMemberById" resultMap="resMember">
+		SELECT id, email, password, name, regdate
+		  FROM member
+		 WHERE id = #{id}
+	</select>
+	
 	<select id="countMember" resultType="int">
 		select count(*) from member
 	</select>
@@ -38,4 +44,11 @@
 		  from member 
 		 where email=#{email}
 	</delete>
+	
+	<select id="selectMemberByRegdate" parameterType="ListCommand" resultMap="resMember">
+		select id, email, password, name, regdate 
+		  from member 
+		 where regdate between #{from} and #{to} 
+		 order by regdate desc
+	</select>
 </mapper>

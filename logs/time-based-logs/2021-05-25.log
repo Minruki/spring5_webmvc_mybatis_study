@@ -1,0 +1,84 @@
+[DEBUG] [2021-05-25 12:21] testDataSource()
+[DEBUG] [2021-05-25 12:21] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-25 12:21] LoginTimeout 30
+[DEBUG] [2021-05-25 12:22] testOpenSession()
+[DEBUG] [2021-05-25 12:22] session org.apache.ibatis.session.defaults.DefaultSqlSession@7159a5cd
+[DEBUG] [2021-05-25 12:22] test1SelectMemberByEmail()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: SELECT id, email, password, name, regdate FROM member WHERE email = ?
+[DEBUG] [2021-05-25 12:22] ==> Parameters: test@test.co.kr(String)
+[DEBUG] [2021-05-25 12:22] <==      Total: 0
+[DEBUG] [2021-05-25 12:22] test2SelectMemberAll()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: SELECT id, email, password, name, regdate FROM member
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 
+[TRACE] [2021-05-25 12:22] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-25 12:22] <==        Row: 1, min@test.co.kr, angel123, minmin, 2021-05-25 12:01:16.0
+[TRACE] [2021-05-25 12:22] <==        Row: 2, aaa@test.co.kr, angel777, lee, 2021-05-25 12:10:54.0
+[TRACE] [2021-05-25 12:22] <==        Row: 3, bbb@test.co.kr, angel123, bbb, 2021-05-25 12:11:48.0
+[DEBUG] [2021-05-25 12:22] <==      Total: 3
+[DEBUG] [2021-05-25 12:22] Member [id=1, email=min@test.co.kr, password=angel123, name=minmin, registerDateTime=2021-05-25T12:01:16]
+[DEBUG] [2021-05-25 12:22] Member [id=2, email=aaa@test.co.kr, password=angel777, name=lee, registerDateTime=2021-05-25T12:10:54]
+[DEBUG] [2021-05-25 12:22] Member [id=3, email=bbb@test.co.kr, password=angel123, name=bbb, registerDateTime=2021-05-25T12:11:48]
+[DEBUG] [2021-05-25 12:22] test3CountMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: select count(*) from member
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 
+[TRACE] [2021-05-25 12:22] <==    Columns: count(*)
+[TRACE] [2021-05-25 12:22] <==        Row: 3
+[DEBUG] [2021-05-25 12:22] <==      Total: 1
+[DEBUG] [2021-05-25 12:22] cnt >> 3
+[DEBUG] [2021-05-25 12:22] test4InsertMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: insert into member (email, password, name, regdate) values (?, ?, ?, now())
+[DEBUG] [2021-05-25 12:22] ==> Parameters: test20@test.co.kr(String), 1111(String), test20(String)
+[DEBUG] [2021-05-25 12:22] <==    Updates: 1
+[DEBUG] [2021-05-25 12:22] test5UpdateMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: update member set name=?, password=? where email=?
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 테스트20(String), 2222(String), test20@test.co.kr(String)
+[DEBUG] [2021-05-25 12:22] <==    Updates: 1
+[DEBUG] [2021-05-25 12:22] test6DeleteMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: delete from member where email=?
+[DEBUG] [2021-05-25 12:22] ==> Parameters: test20@test.co.kr(String)
+[DEBUG] [2021-05-25 12:22] <==    Updates: 1
+[DEBUG] [2021-05-25 12:22] test7SelectMemberByRegdate()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: select id, email, password, name, regdate from member where regdate between ? and ? order by regdate desc
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 2021-05-20T00:00(LocalDateTime), 2021-05-21T00:00(LocalDateTime)
+[DEBUG] [2021-05-25 12:22] <==      Total: 0
+[DEBUG] [2021-05-25 12:22] test1SelectMemberByEmail()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: SELECT id, email, password, name, regdate FROM member WHERE email = ?
+[DEBUG] [2021-05-25 12:22] ==> Parameters: min@test.co.kr(String)
+[TRACE] [2021-05-25 12:22] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-25 12:22] <==        Row: 1, min@test.co.kr, angel123, minmin, 2021-05-25 12:01:16.0
+[DEBUG] [2021-05-25 12:22] <==      Total: 1
+[DEBUG] [2021-05-25 12:22] Member [id=1, email=min@test.co.kr, password=angel123, name=minmin, registerDateTime=2021-05-25T12:01:16]
+[DEBUG] [2021-05-25 12:22] test2SelectMemberAll()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: SELECT id, email, password, name, regdate FROM member
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 
+[TRACE] [2021-05-25 12:22] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-25 12:22] <==        Row: 1, min@test.co.kr, angel123, minmin, 2021-05-25 12:01:16.0
+[TRACE] [2021-05-25 12:22] <==        Row: 2, aaa@test.co.kr, angel777, lee, 2021-05-25 12:10:54.0
+[TRACE] [2021-05-25 12:22] <==        Row: 3, bbb@test.co.kr, angel123, bbb, 2021-05-25 12:11:48.0
+[DEBUG] [2021-05-25 12:22] <==      Total: 3
+[DEBUG] [2021-05-25 12:22] Member [id=1, email=min@test.co.kr, password=angel123, name=minmin, registerDateTime=2021-05-25T12:01:16]
+[DEBUG] [2021-05-25 12:22] Member [id=2, email=aaa@test.co.kr, password=angel777, name=lee, registerDateTime=2021-05-25T12:10:54]
+[DEBUG] [2021-05-25 12:22] Member [id=3, email=bbb@test.co.kr, password=angel123, name=bbb, registerDateTime=2021-05-25T12:11:48]
+[DEBUG] [2021-05-25 12:22] test3CountMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: select count(*) from member
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 
+[TRACE] [2021-05-25 12:22] <==    Columns: count(*)
+[TRACE] [2021-05-25 12:22] <==        Row: 3
+[DEBUG] [2021-05-25 12:22] <==      Total: 1
+[DEBUG] [2021-05-25 12:22] cnt >> 3
+[DEBUG] [2021-05-25 12:22] test4InsertMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: insert into member (email, password, name, regdate) values (?, ?, ?, now())
+[DEBUG] [2021-05-25 12:22] ==> Parameters: test20@test.co.kr(String), 1111(String), test20(String)
+[DEBUG] [2021-05-25 12:22] <==    Updates: 1
+[DEBUG] [2021-05-25 12:22] test5UpdateMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: update member set name=?, password=? where email=?
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 테스트20(String), 2222(String), test20@test.co.kr(String)
+[DEBUG] [2021-05-25 12:22] <==    Updates: 1
+[DEBUG] [2021-05-25 12:22] test6DeleteMember()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: delete from member where email=?
+[DEBUG] [2021-05-25 12:22] ==> Parameters: test20@test.co.kr(String)
+[DEBUG] [2021-05-25 12:22] <==    Updates: 1
+[DEBUG] [2021-05-25 12:22] test7SelectMemberByRegdate()
+[DEBUG] [2021-05-25 12:22] ==>  Preparing: select id, email, password, name, regdate from member where regdate between ? and ? order by regdate desc
+[DEBUG] [2021-05-25 12:22] ==> Parameters: 2021-05-20T00:00(LocalDateTime), 2021-05-21T00:00(LocalDateTime)
+[DEBUG] [2021-05-25 12:22] <==      Total: 0

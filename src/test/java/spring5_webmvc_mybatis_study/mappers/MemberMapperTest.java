@@ -1,5 +1,6 @@
 package spring5_webmvc_mybatis_study.mappers;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.apache.ibatis.logging.Log;
@@ -16,6 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import spring5_webmvc_mybatis_study.config.ContextRoot;
+import spring5_webmvc_mybatis_study.dto.ListCommand;
 import spring5_webmvc_mybatis_study.dto.Member;
 
 
@@ -37,7 +39,7 @@ public class MemberMapperTest {
 	@Test
 	public void test1SelectMemberByEmail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		String email="test@test.co.kr";
+		String email="aaa@test.co.kr";
 		
 		Member member = mapper.selectMemberByEmail(email);
 		log.debug(member.toString());
@@ -90,5 +92,29 @@ public class MemberMapperTest {
 		int res = mapper.deleteMember(newMember);
 		Assert.assertEquals(1, res);
 	}
-
+	
+	@Test
+	public void test7SelectMemberByRegdate() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		ListCommand listCommand = new ListCommand();
+		LocalDateTime from = LocalDateTime.of(2021, 5, 20, 00, 00);
+		LocalDateTime to = LocalDateTime.of(2021, 5, 21, 00, 00);
+		listCommand.setFrom(from);
+		listCommand.setTo(to);
+		
+		List<Member> list = mapper.selectMemberByRegdate(listCommand);
+		Assert.assertNotNull(list);
+		
+		list.forEach(s->log.debug(s.toString()));
+	}
+	
+	@Test
+	public void test8SelectMemberById() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		
+		Member member = mapper.selectMemberById(1);
+		Assert.assertNotNull(member);
+		
+		log.debug(member.toString());
+	}
 }

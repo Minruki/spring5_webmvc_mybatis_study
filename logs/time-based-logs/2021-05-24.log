@@ -1,0 +1,195 @@
+[DEBUG] [2021-05-24 18:05] testOpenSession()
+[DEBUG] [2021-05-24 18:05] session org.apache.ibatis.session.defaults.DefaultSqlSession@7cf162bc
+[DEBUG] [2021-05-24 18:07] testDataSource()
+[DEBUG] [2021-05-24 18:07] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-24 18:07] LoginTimeout 30
+[DEBUG] [2021-05-24 18:08] test1SelectMemberByEmail()
+[DEBUG] [2021-05-24 18:08] ==>  Preparing: SELECT id, email, password, name, regdate FROM member WHERE email = ?
+[DEBUG] [2021-05-24 18:08] ==> Parameters: test@test.co.kr(String)
+[DEBUG] [2021-05-24 18:08] <==      Total: 0
+[DEBUG] [2021-05-24 18:08] test2SelectMemberAll()
+[DEBUG] [2021-05-24 18:08] ==>  Preparing: SELECT id, email, password, name, regdate FROM member
+[DEBUG] [2021-05-24 18:08] ==> Parameters: 
+[DEBUG] [2021-05-24 18:08] <==      Total: 0
+[DEBUG] [2021-05-24 18:08] test3CountMember()
+[DEBUG] [2021-05-24 18:08] ==>  Preparing: select count(*) from member
+[DEBUG] [2021-05-24 18:08] ==> Parameters: 
+[TRACE] [2021-05-24 18:08] <==    Columns: count(*)
+[TRACE] [2021-05-24 18:08] <==        Row: 0
+[DEBUG] [2021-05-24 18:08] <==      Total: 1
+[DEBUG] [2021-05-24 18:08] cnt >> 0
+[DEBUG] [2021-05-24 18:08] test4InsertMember()
+[DEBUG] [2021-05-24 18:08] ==>  Preparing: insert into member (email, password, name, regdate) values (?, ?, ?, now())
+[DEBUG] [2021-05-24 18:08] ==> Parameters: test20@test.co.kr(String), 1111(String), test20(String)
+[DEBUG] [2021-05-24 18:08] <==    Updates: 1
+[DEBUG] [2021-05-24 18:08] test5UpdateMember()
+[DEBUG] [2021-05-24 18:08] ==>  Preparing: update member set name=?, password=? where email=?
+[DEBUG] [2021-05-24 18:08] ==> Parameters: 테스트20(String), 2222(String), test20@test.co.kr(String)
+[DEBUG] [2021-05-24 18:08] <==    Updates: 1
+[DEBUG] [2021-05-24 18:08] test6DeleteMember()
+[DEBUG] [2021-05-24 18:08] ==>  Preparing: delete from member where email=?
+[DEBUG] [2021-05-24 18:08] ==> Parameters: test20@test.co.kr(String)
+[DEBUG] [2021-05-24 18:08] <==    Updates: 1
+[DEBUG] [2021-05-24 18:10] test1SelectMemberByEmail()
+[DEBUG] [2021-05-24 18:10] ==>  Preparing: SELECT id, email, password, name, regdate FROM member WHERE email = ?
+[DEBUG] [2021-05-24 18:10] ==> Parameters: test@test.co.kr(String)
+[TRACE] [2021-05-24 18:10] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 18:10] <==        Row: 2, test@test.co.kr, angel777, 이민정, 2021-05-24 18:09:43.0
+[DEBUG] [2021-05-24 18:10] <==      Total: 1
+[DEBUG] [2021-05-24 18:10] Member [id=2, email=test@test.co.kr, password=angel777, name=이민정, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 18:10] test2SelectMemberAll()
+[DEBUG] [2021-05-24 18:10] ==>  Preparing: SELECT id, email, password, name, regdate FROM member
+[DEBUG] [2021-05-24 18:10] ==> Parameters: 
+[TRACE] [2021-05-24 18:10] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 18:10] <==        Row: 2, test@test.co.kr, angel777, 이민정, 2021-05-24 18:09:43.0
+[DEBUG] [2021-05-24 18:10] <==      Total: 1
+[DEBUG] [2021-05-24 18:10] Member [id=2, email=test@test.co.kr, password=angel777, name=이민정, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 18:10] test3CountMember()
+[DEBUG] [2021-05-24 18:10] ==>  Preparing: select count(*) from member
+[DEBUG] [2021-05-24 18:10] ==> Parameters: 
+[TRACE] [2021-05-24 18:10] <==    Columns: count(*)
+[TRACE] [2021-05-24 18:10] <==        Row: 1
+[DEBUG] [2021-05-24 18:10] <==      Total: 1
+[DEBUG] [2021-05-24 18:10] cnt >> 1
+[DEBUG] [2021-05-24 18:10] test4InsertMember()
+[DEBUG] [2021-05-24 18:10] ==>  Preparing: insert into member (email, password, name, regdate) values (?, ?, ?, now())
+[DEBUG] [2021-05-24 18:10] ==> Parameters: test20@test.co.kr(String), 1111(String), test20(String)
+[DEBUG] [2021-05-24 18:10] <==    Updates: 1
+[DEBUG] [2021-05-24 18:10] test5UpdateMember()
+[DEBUG] [2021-05-24 18:10] ==>  Preparing: update member set name=?, password=? where email=?
+[DEBUG] [2021-05-24 18:10] ==> Parameters: 테스트20(String), 2222(String), test20@test.co.kr(String)
+[DEBUG] [2021-05-24 18:10] <==    Updates: 1
+[DEBUG] [2021-05-24 18:10] test6DeleteMember()
+[DEBUG] [2021-05-24 18:10] ==>  Preparing: delete from member where email=?
+[DEBUG] [2021-05-24 18:10] ==> Parameters: test20@test.co.kr(String)
+[DEBUG] [2021-05-24 18:10] <==    Updates: 1
+[DEBUG] [2021-05-24 20:00] test1SelectMemberByEmail()
+[DEBUG] [2021-05-24 20:00] ==>  Preparing: SELECT id, email, password, name, regdate FROM member WHERE email = ?
+[DEBUG] [2021-05-24 20:00] ==> Parameters: test@test.co.kr(String)
+[TRACE] [2021-05-24 20:00] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 20:00] <==        Row: 2, test@test.co.kr, angel123, 이민정, 2021-05-24 18:09:43.0
+[DEBUG] [2021-05-24 20:00] <==      Total: 1
+[DEBUG] [2021-05-24 20:00] Member [id=2, email=test@test.co.kr, password=angel123, name=이민정, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 20:00] test2SelectMemberAll()
+[DEBUG] [2021-05-24 20:00] ==>  Preparing: SELECT id, email, password, name, regdate FROM member
+[DEBUG] [2021-05-24 20:00] ==> Parameters: 
+[TRACE] [2021-05-24 20:00] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 20:00] <==        Row: 2, test@test.co.kr, angel123, 이민정, 2021-05-24 18:09:43.0
+[TRACE] [2021-05-24 20:00] <==        Row: 4, test1@test.co.kr, angel123, lee, 2021-05-24 19:20:08.0
+[TRACE] [2021-05-24 20:00] <==        Row: 5, test123@test.co.kr, angel777, lee, 2021-05-24 19:39:37.0
+[TRACE] [2021-05-24 20:00] <==        Row: 6, test1111@test.co.kr, angel123, lee, 2021-05-24 19:59:23.0
+[DEBUG] [2021-05-24 20:00] <==      Total: 4
+[DEBUG] [2021-05-24 20:00] Member [id=2, email=test@test.co.kr, password=angel123, name=이민정, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 20:00] Member [id=4, email=test1@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T19:20:08]
+[DEBUG] [2021-05-24 20:00] Member [id=5, email=test123@test.co.kr, password=angel777, name=lee, registerDateTime=2021-05-24T19:39:37]
+[DEBUG] [2021-05-24 20:00] Member [id=6, email=test1111@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T19:59:23]
+[DEBUG] [2021-05-24 20:00] test3CountMember()
+[DEBUG] [2021-05-24 20:00] ==>  Preparing: select count(*) from member
+[DEBUG] [2021-05-24 20:00] ==> Parameters: 
+[TRACE] [2021-05-24 20:00] <==    Columns: count(*)
+[TRACE] [2021-05-24 20:00] <==        Row: 4
+[DEBUG] [2021-05-24 20:00] <==      Total: 1
+[DEBUG] [2021-05-24 20:00] cnt >> 4
+[DEBUG] [2021-05-24 20:00] test4InsertMember()
+[DEBUG] [2021-05-24 20:00] ==>  Preparing: insert into member (email, password, name, regdate) values (?, ?, ?, now())
+[DEBUG] [2021-05-24 20:00] ==> Parameters: test20@test.co.kr(String), 1111(String), test20(String)
+[DEBUG] [2021-05-24 20:00] <==    Updates: 1
+[DEBUG] [2021-05-24 20:00] test5UpdateMember()
+[DEBUG] [2021-05-24 20:00] ==>  Preparing: update member set name=?, password=? where email=?
+[DEBUG] [2021-05-24 20:00] ==> Parameters: 테스트20(String), 2222(String), test20@test.co.kr(String)
+[DEBUG] [2021-05-24 20:00] <==    Updates: 1
+[DEBUG] [2021-05-24 20:00] test6DeleteMember()
+[DEBUG] [2021-05-24 20:00] ==>  Preparing: delete from member where email=?
+[DEBUG] [2021-05-24 20:00] ==> Parameters: test20@test.co.kr(String)
+[DEBUG] [2021-05-24 20:00] <==    Updates: 1
+[DEBUG] [2021-05-24 20:41] testDataSource()
+[DEBUG] [2021-05-24 20:41] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-24 20:41] LoginTimeout 30
+[DEBUG] [2021-05-24 20:41] testOpenSession()
+[DEBUG] [2021-05-24 20:41] session org.apache.ibatis.session.defaults.DefaultSqlSession@355292c0
+[DEBUG] [2021-05-24 20:41] test1SelectMemberByEmail()
+[DEBUG] [2021-05-24 20:41] ==>  Preparing: SELECT id, email, password, name, regdate FROM member WHERE email = ?
+[DEBUG] [2021-05-24 20:41] ==> Parameters: test@test.co.kr(String)
+[TRACE] [2021-05-24 20:41] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 20:41] <==        Row: 2, test@test.co.kr, angel123, 이민정, 2021-05-24 18:09:43.0
+[DEBUG] [2021-05-24 20:41] <==      Total: 1
+[DEBUG] [2021-05-24 20:41] Member [id=2, email=test@test.co.kr, password=angel123, name=이민정, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 20:41] test2SelectMemberAll()
+[DEBUG] [2021-05-24 20:41] ==>  Preparing: SELECT id, email, password, name, regdate FROM member
+[DEBUG] [2021-05-24 20:41] ==> Parameters: 
+[TRACE] [2021-05-24 20:41] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 20:41] <==        Row: 2, test@test.co.kr, angel123, 이민정, 2021-05-24 18:09:43.0
+[TRACE] [2021-05-24 20:41] <==        Row: 4, test1@test.co.kr, angel123, lee, 2021-05-24 19:20:08.0
+[TRACE] [2021-05-24 20:41] <==        Row: 5, test123@test.co.kr, angel777, lee, 2021-05-24 19:39:37.0
+[TRACE] [2021-05-24 20:41] <==        Row: 6, test1111@test.co.kr, angel123, lee, 2021-05-24 19:59:23.0
+[TRACE] [2021-05-24 20:41] <==        Row: 9, root@root.co.kr, angel777, lee, 2021-05-24 20:01:18.0
+[TRACE] [2021-05-24 20:41] <==        Row: 10, 123@test.co.kr, angel123, lee, 2021-05-24 20:40:54.0
+[DEBUG] [2021-05-24 20:41] <==      Total: 6
+[DEBUG] [2021-05-24 20:41] Member [id=2, email=test@test.co.kr, password=angel123, name=이민정, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 20:41] Member [id=4, email=test1@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T19:20:08]
+[DEBUG] [2021-05-24 20:41] Member [id=5, email=test123@test.co.kr, password=angel777, name=lee, registerDateTime=2021-05-24T19:39:37]
+[DEBUG] [2021-05-24 20:41] Member [id=6, email=test1111@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T19:59:23]
+[DEBUG] [2021-05-24 20:41] Member [id=9, email=root@root.co.kr, password=angel777, name=lee, registerDateTime=2021-05-24T20:01:18]
+[DEBUG] [2021-05-24 20:41] Member [id=10, email=123@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T20:40:54]
+[DEBUG] [2021-05-24 20:41] test3CountMember()
+[DEBUG] [2021-05-24 20:41] ==>  Preparing: select count(*) from member
+[DEBUG] [2021-05-24 20:41] ==> Parameters: 
+[TRACE] [2021-05-24 20:41] <==    Columns: count(*)
+[TRACE] [2021-05-24 20:41] <==        Row: 6
+[DEBUG] [2021-05-24 20:41] <==      Total: 1
+[DEBUG] [2021-05-24 20:41] cnt >> 6
+[DEBUG] [2021-05-24 20:41] test4InsertMember()
+[DEBUG] [2021-05-24 20:41] ==>  Preparing: insert into member (email, password, name, regdate) values (?, ?, ?, now())
+[DEBUG] [2021-05-24 20:41] ==> Parameters: test20@test.co.kr(String), 1111(String), test20(String)
+[DEBUG] [2021-05-24 20:41] <==    Updates: 1
+[DEBUG] [2021-05-24 20:41] test5UpdateMember()
+[DEBUG] [2021-05-24 20:41] ==>  Preparing: update member set name=?, password=? where email=?
+[DEBUG] [2021-05-24 20:41] ==> Parameters: 테스트20(String), 2222(String), test20@test.co.kr(String)
+[DEBUG] [2021-05-24 20:41] <==    Updates: 1
+[DEBUG] [2021-05-24 20:41] test6DeleteMember()
+[DEBUG] [2021-05-24 20:41] ==>  Preparing: delete from member where email=?
+[DEBUG] [2021-05-24 20:41] ==> Parameters: test20@test.co.kr(String)
+[DEBUG] [2021-05-24 20:41] <==    Updates: 1
+[DEBUG] [2021-05-24 20:42] test1SelectMemberByEmail()
+[DEBUG] [2021-05-24 20:42] ==>  Preparing: SELECT id, email, password, name, regdate FROM member WHERE email = ?
+[DEBUG] [2021-05-24 20:42] ==> Parameters: test@test.co.kr(String)
+[TRACE] [2021-05-24 20:42] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 20:42] <==        Row: 2, test@test.co.kr, angel123, �̹���, 2021-05-24 18:09:43.0
+[DEBUG] [2021-05-24 20:42] <==      Total: 1
+[DEBUG] [2021-05-24 20:42] Member [id=2, email=test@test.co.kr, password=angel123, name=�̹���, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 20:42] test2SelectMemberAll()
+[DEBUG] [2021-05-24 20:42] ==>  Preparing: SELECT id, email, password, name, regdate FROM member
+[DEBUG] [2021-05-24 20:42] ==> Parameters: 
+[TRACE] [2021-05-24 20:42] <==    Columns: id, email, password, name, regdate
+[TRACE] [2021-05-24 20:42] <==        Row: 2, test@test.co.kr, angel123, �̹���, 2021-05-24 18:09:43.0
+[TRACE] [2021-05-24 20:42] <==        Row: 4, test1@test.co.kr, angel123, lee, 2021-05-24 19:20:08.0
+[TRACE] [2021-05-24 20:42] <==        Row: 5, test123@test.co.kr, angel777, lee, 2021-05-24 19:39:37.0
+[TRACE] [2021-05-24 20:42] <==        Row: 6, test1111@test.co.kr, angel123, lee, 2021-05-24 19:59:23.0
+[TRACE] [2021-05-24 20:42] <==        Row: 9, root@root.co.kr, angel777, lee, 2021-05-24 20:01:18.0
+[TRACE] [2021-05-24 20:42] <==        Row: 10, 123@test.co.kr, angel123, lee, 2021-05-24 20:40:54.0
+[DEBUG] [2021-05-24 20:42] <==      Total: 6
+[DEBUG] [2021-05-24 20:42] Member [id=2, email=test@test.co.kr, password=angel123, name=�̹���, registerDateTime=2021-05-24T18:09:43]
+[DEBUG] [2021-05-24 20:42] Member [id=4, email=test1@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T19:20:08]
+[DEBUG] [2021-05-24 20:42] Member [id=5, email=test123@test.co.kr, password=angel777, name=lee, registerDateTime=2021-05-24T19:39:37]
+[DEBUG] [2021-05-24 20:42] Member [id=6, email=test1111@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T19:59:23]
+[DEBUG] [2021-05-24 20:42] Member [id=9, email=root@root.co.kr, password=angel777, name=lee, registerDateTime=2021-05-24T20:01:18]
+[DEBUG] [2021-05-24 20:42] Member [id=10, email=123@test.co.kr, password=angel123, name=lee, registerDateTime=2021-05-24T20:40:54]
+[DEBUG] [2021-05-24 20:42] test3CountMember()
+[DEBUG] [2021-05-24 20:42] ==>  Preparing: select count(*) from member
+[DEBUG] [2021-05-24 20:42] ==> Parameters: 
+[TRACE] [2021-05-24 20:42] <==    Columns: count(*)
+[TRACE] [2021-05-24 20:42] <==        Row: 6
+[DEBUG] [2021-05-24 20:42] <==      Total: 1
+[DEBUG] [2021-05-24 20:42] cnt >> 6
+[DEBUG] [2021-05-24 20:42] test4InsertMember()
+[DEBUG] [2021-05-24 20:42] ==>  Preparing: insert into member (email, password, name, regdate) values (?, ?, ?, now())
+[DEBUG] [2021-05-24 20:42] ==> Parameters: test20@test.co.kr(String), 1111(String), test20(String)
+[DEBUG] [2021-05-24 20:42] <==    Updates: 1
+[DEBUG] [2021-05-24 20:42] test5UpdateMember()
+[DEBUG] [2021-05-24 20:42] ==>  Preparing: update member set name=?, password=? where email=?
+[DEBUG] [2021-05-24 20:42] ==> Parameters: �׽�Ʈ20(String), 2222(String), test20@test.co.kr(String)
+[DEBUG] [2021-05-24 20:42] <==    Updates: 1
+[DEBUG] [2021-05-24 20:42] test6DeleteMember()
+[DEBUG] [2021-05-24 20:42] ==>  Preparing: delete from member where email=?
+[DEBUG] [2021-05-24 20:42] ==> Parameters: test20@test.co.kr(String)
+[DEBUG] [2021-05-24 20:42] <==    Updates: 1
